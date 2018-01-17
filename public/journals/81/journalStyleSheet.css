@@ -1,0 +1,617 @@
+/**
+CSS de Perfiles Educativos
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #FFF;
+	color: #333;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-align: center;
+}
+
+div {
+	text-align: left;
+}
+
+p {
+	margin: 1em 0; /* Making default stylesheet explicit - fixes IE7 margin collapsing. */
+}
+
+table {
+	border: 0;
+	border-spacing: 0;
+	font-size: 1.0em;
+}
+
+form {
+	margin: 0;
+}
+
+a:link {
+	color:#333;
+	text-decoration: none;
+	background:transparent;
+}
+a:hover, a:visited:hover {
+	color:#666;
+	text-decoration: underline;
+	background:transparent;
+}
+a:visited {
+	color:#333;
+	text-decoration: none;
+	background:transparent;
+}
+a.plain {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0.25em 0 0.75em 0;
+	padding: 0 0 0 2.5em;
+}
+
+tt {
+	font-size: 1.25em;
+}
+
+label {
+}
+
+label.error {
+	color: #900;
+}
+
+input.textField, select.selectMenu, textarea.textArea, input.uploadField {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	border: 1px solid #CCC;
+	border-radius:4px;
+	font-size: 1em;
+	background-image: linear-gradient(to bottom, #fff 0px, #e0e0e0 100%);
+    background-repeat: repeat-x;
+    text-shadow: 0 1px 0 #fff;
+}
+
+
+input.button {
+	font-size: 1em;
+	color:#333;
+	padding: 0.3em 1em;
+	margin:0em 10px;
+	background-image: linear-gradient(to bottom, #fff 0px, #e0e0e0 100%);
+    background-repeat: repeat-x;
+	border: 1px solid #CCC;
+	border-radius:4px;
+    text-shadow: 0 1px 0 #fff;
+}
+input.button:hover {
+	font-size: 1em;
+	color:#333;
+	padding: 0.3em 1em;
+	margin:0em 10px;
+    background: #E0E0E0;
+	border: 1px solid #CCC;
+	border-radius:4px;
+    text-shadow: 0 1px 0 #fff;
+}
+
+input.defaultButton {
+	color: #333;
+	font-weight: bold;
+	margin-left:0px;
+	
+	background-image: linear-gradient(to bottom, #fff 0px, #e0e0e0 100%);
+    background-repeat: repeat-x;
+    border-color: #ccc;
+    text-shadow: 0 1px 0 #fff;
+}
+input.defaultButton:hover{
+	color: #333;
+	font-weight: bold;
+	margin-left:0px;
+	
+	background-image: #CCC;
+    border-color: #ccc;
+    text-shadow: 0 1px 0 #fff;
+}
+/**
+ * Main layout elements
+ */
+
+#container {
+	width: 100% !important;
+	min-width: 980px !important;
+}
+
+#header {
+	margin:0 auto;
+	text-align: center;
+	background:#5c606f;
+	width:100%
+}
+
+#headerTitle {
+	margin: 0 auto;
+    padding: 0;
+    text-align: left !important;
+    max-width:1239px;
+	width: 100%;
+}
+
+#header h1 {
+	
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: normal;
+	margin:0;
+	padding:0;
+}
+/*Este estilo lo estoy planchando pues viene desde rightsidebar*/
+#body {
+    margin: 0 auto;
+    width: 80%;
+}
+/********/
+
+#footer {
+	width: 100%;
+	min-height: 50px;
+	position: static;
+	clear: both;
+	text-align: center;
+}
+
+#footerContent {
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 10%;
+}
+
+#main {
+	display: inline;
+    float: left;
+    margin-left: 7%;
+	padding: 0em 0em 2em;
+    overflow: hidden;
+    width: 60%;
+	
+}
+
+#main h2 {
+	margin: 0em 1em 0.5em 0em;
+	padding-top: 0.5em;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: normal;
+}
+
+#main h3 {
+	margin: 0em 1em 0.5em 0em;
+	padding-top: 0em;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: normal;
+}
+
+#navbar {
+	margin-top:0px;
+	margin-right: 0;
+	padding: 10px 3px;
+	border-bottom: none;
+	background: #5a606e; /* Old browsers */
+	background: -moz-linear-gradient(top, #5a606e 0%, #4d515c 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #5a606e 0%,#4d515c 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #5a606e 0%,#4d515c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a606e', endColorstr='#4d515c',GradientType=0 ); /* IE6-9 */
+
+}
+#navbar a {
+	color:#FFF;
+	background:transparent;
+	height:22px;
+	padding:12px 5px;
+	font-weight:normal;
+	line-height:24px;
+	}
+#navbar a:hover{
+	color:#000;
+	background:#e7e7e7;
+	height:22px;
+	padding:12px 5px;
+	font-weight:normal;
+	line-height:24px;
+	}
+#main #navbar ul.menu li {
+	margin: 0;
+	padding: 0;
+	padding-right: .5em;
+	display: inline;
+}
+
+#breadcrumb {
+	padding-top: 1em;
+	font-size: 0.7em;
+}
+#rightSidebar {
+    border: 1px solid gray;
+    float: right;
+    font-size: 0.65em;
+    height: 100%;
+    margin-left: 2%;
+    margin-right: 10%;
+    padding: 1%;
+    width: 16%;
+	background-color: #fff;
+    border: 1px solid #ddd;
+	border-radius:4px;
+}
+#content {
+	margin: 0;
+	padding: 0;
+	padding-top: 0.5em;
+	font-size: 0.7em;
+	border-top: 2px solid #2f70a8;
+}
+
+#content h3 {
+	margin: 0em 1em 0.25em 0em;
+	padding-top: 0.75em;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: normal;
+	font-size: 1.8em;
+	color:#000;
+}
+
+#content h4 {
+	margin: .75em 1em 0.25em 0em;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: normal;
+	font-size: 1.5em;
+	color:#000;
+}
+
+#content h5 {
+	margin: 0em 1em 0.25em 0em;
+	padding-top: 0.75em;
+	font-weight: bold;
+	font-size: 1em;
+	color:#000;
+}
+#content h1,h2,h3,h4,h5 a:link{
+	color:#000;
+}
+#content h1,h2,h3,h4,h5 a:hover,#content h1,h2,h3,h4,h5 a:visited:hover{
+	color:#666;
+}
+#content h1,h2,h3,h4,h5 a:visited{
+	color:#000;
+}
+
+
+#content #siteManagement ul li a:link{
+	color:#000;
+}
+#content #siteManagement ul li a:hover, #content #siteManagement ul li a:visited:hover{
+	color:#666;
+	text-decoration:underline;
+}
+#content #siteManagement ul li a:visited{
+	color:#000;
+}
+
+/**
+ * Breadcrumbs
+ */
+
+#breadcrumb a {
+	text-decoration: none;
+	color: #333;
+	background-color:transparent;
+}
+#breadcrumb a:hover, #breadcrumb a:visited:hover {
+	text-decoration: none;
+	color: #666;
+	background-color:transparent;
+}
+#breadcrumb a.current {
+	font-weight: bold;
+	background-color:transparent;
+}
+
+
+/**
+ * Footer elements
+ */
+
+#footer div.debugStats {
+	font-size: 0.6em;
+}
+
+
+/**
+ * Additional text styles
+ */
+
+span.disabled, label.disabled {
+	color: #666;
+}
+
+a.action, a.file {
+	font-size: 0.85em;
+	text-transform: uppercase;
+}
+
+a.icon {
+	text-decoration: none;
+}
+
+a.icon img {
+	border: 0;
+}
+
+a.icon:hover {
+	background: none;
+}
+
+span.formRequired {
+	color: #333;
+	font-size: 0.9em;
+}
+
+span.heading {
+	font-size: 0.85em;
+	text-transform: uppercase;
+}
+
+span.highlight {
+	border-bottom: 1px dotted #000;
+}
+
+div.warningMessage {
+	background: url(../templates/images/icons/icon_alert.gif) no-repeat 3px 40%;
+	margin: 5px;
+	padding: 5px 5px 5px 25px;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+/**
+ * Table styles
+ */
+
+table.info td {
+	padding: 0;
+	padding-bottom: 0.5em;
+	padding-right: 0.5em;
+}
+
+table.listing td {
+	padding: 0.25em 1.5em 0.25em 0.5em;
+}
+
+table.listing tr.heading td, table.listing td.heading, table.info td.heading {
+	font-size: 0.85em;
+	text-transform: uppercase;
+	font-weight: normal;
+	padding: 0.75em 1.5em 1em 0.5em;
+}
+
+table.info td.heading {
+	padding-left: 0;
+}
+
+
+table.listing td.nodata, table.info td.nodata {
+	text-align: center;
+	font-style: italic;
+}
+
+table.listing td.headseparator {
+	border-top: 1px dotted #000;
+	font-size: 0.1em;
+	line-height: 1%;
+}
+
+table.listing td.endseparator {
+	border-top: 1px dotted #000;
+	font-size: 0.25em;
+	line-height: 10%;
+}
+
+table.listing td.separator, table.info td.separator {
+	border-top: 1px dotted #DDDDD0;
+	font-size: 0.1em;
+	line-height: 1%;
+}
+
+table.data tr {
+}
+
+table.data td {
+	padding-bottom: 0.25em;
+}
+
+table.data td.label {
+	padding-right: 1em;
+}
+
+table.data td.value {
+}
+
+table.data td.separator {
+	padding: 0.5em;
+	font-size: 0.1em;
+	line-height: 1%;
+}
+
+table.data td.heading {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+table.nested tr {
+	padding: 0;
+	margin: 0;
+}
+
+table.info td a:link {
+	color:#666;
+}
+table.info td a:hover, table.info td a:visited:hover {
+	color:#000;
+}
+table.info td a:visited {
+	color:#666;
+}
+span.nested {
+	padding: 0 4px 0 0;
+	font-size: 1.2em;
+}
+
+/**
+ * Form-specific elements
+ */
+
+span.pkp_form_error { /* Named for compatibility with new lessphp structure */
+	color: #900;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+span.pkp_form_success { /* Named for compatibility with new lessphp structure */
+	color: #090;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+ul.pkp_form_error_list { /* Named for compatibility with new lessphp structure */
+	color: #900;
+}
+
+
+/**
+ * Other organizational elements
+ */
+
+ul.menu {
+	margin: 0;
+	padding: 0;
+}
+
+ul.menu li {
+	margin: 0;
+	padding: 0;
+	padding-right: 1.5em;
+	display: inline;
+}
+
+ul.menu li.current {
+	font-weight: bold;
+}
+
+ul.menu a {
+	font-size: 0.85em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+ul.steplist {
+	margin: 0;
+	padding: 0;
+	list-style-type: decimal;
+}
+
+ul.steplist li a:link{
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	color:#666;
+	padding-right: 0.5em;
+	display: inline;
+	text-transform: uppercase;
+}
+ul.steplist li a:hover, ul.steplist li a:visited:hover{
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	color:#333;
+	padding-right: 0.5em;
+	display: inline;
+	text-transform: uppercase;
+}
+ul.steplist li a:visited{
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	color:#666;
+	padding-right: 0.5em;
+	display: inline;
+	text-transform: uppercase;
+}
+
+
+
+ul.steplist li.current a:link {
+	font-weight: bold;
+	color:#000;
+	font-size: 1em;
+	display: inline;
+	padding-right: 0.5em;
+	text-decoration:none;
+	text-transform: uppercase;
+}
+ul.steplist li.current a:hover, ul.steplist li.current a:visited:hover {
+	font-weight: bold;
+	color:#666;
+	font-size: 1em;
+	display: inline;
+	padding-right: 0.5em;
+	text-decoration:none;
+	text-transform: uppercase;
+}
+ul.steplist li.current a:visited {
+	font-weight: bold;
+	color:#000;
+	font-size: 1em;
+	display: inline;
+	padding-right: 0.5em;
+	text-decoration:none;
+	text-transform: uppercase;
+}
+
+
+ul.steplist a {
+	text-decoration: none;
+}
+
+ul.plain {
+	list-style-type: none;
+	padding-left: 1.5em;
+}
+
+ul.filter {
+	margin: 0;
+	padding: 1.5em 0 1.5em 0;
+	list-style-type: none;
+}
+
+ul.filter li {
+	padding-right: 1.5em;
+	display: inline;
+}
+
+
+/**
+ * Other organizational elements
+ */
+
+div.separator {
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 0.25em;
+	padding: 0;
+	border-bottom: 1px dotted #000;
+	font-size: 0.5em;
+	line-height: 25%;
+}

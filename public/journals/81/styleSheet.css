@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* CSS Document by Carolina Silva Bretón for Perfiles Educativos */
+
+body {
+	color:#5d606f;
+}
+
+/* HEADER */
+.pkp_structure_head {
+    background: url("http://preproduccion.iib.unam.mx/design/perfiles/fdoTop1.jpg"), #fff;
+    background-size: 50%;
+	background-repeat: repeat-y;
+}
+.has_site_logo .pkp_head_wrapper {
+    padding-top: 0px;
+}
+.pkp_site_name_wrapper {
+	background: url("http://preproduccion.iib.unam.mx/design/perfiles/fdo_iisue.jpg"), url("http://preproduccion.iib.unam.mx/design/perfiles/top.jpg");
+    background-size: auto 100%, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top right, top left;
+	min-height: 120px;
+	height: auto;
+	position: relative;
+}
+.pkp_site_name > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.pkp_site_name {
+    height: 100%;
+    position: absolute;
+	width: 50% !important;
+}
+.pkp_site_name .is_img {
+    display: inline-block;
+    height: 100%;
+    width: 90%;
+}
+.pkp_site_name .is_img img {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+.pkp_structure_main::before, .pkp_structure_main::after {
+    background: none;
+}
+.pkp_structure_head {
+    border-bottom: 0px;
+}
+/* BANNER */
+.mi_banner{
+    width: 100%;
+    background: pink;
+    height: auto;
+	margin-bottom: -5px;
+}
+.mi_banner img {
+	width: 100%;
+	height: auto;
+}
+/* NAV */
+.pkp_navigation_primary_row {
+	background: #5d606f;
+}	
+
+/* NAV */
+.pkp_navigation_primary {
+    display: inline-block;
+    max-width: 80%;
+    text-align: left;
+    margin-left: 30%;
+    width: auto;
+}
+.pkp_navigation_primary > li:first-child a {
+    margin-left: 0;
+    background: url("http://preproduccion.iib.unam.mx/design/perfiles/home.png") no-repeat;
+    width: 50px;
+    height: 30px;
+    margin-bottom: -5px;
+}
+
+/* buscador*/
+.pkp_search {
+    display: inline-block;
+    width: 300px;
+    float: right;
+	padding-top: 8px;
+}
+
+.search_controls {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
