@@ -1,3 +1,4 @@
 [submodule "plugins/themes/default-child"]
 	path = plugins/themes/default-child
 	url = https://github.com/juanCure/default-child.git
+	branch = master
