@@ -7,13 +7,15 @@
  *
  * A template to be included via Templates::Article::Footer::PageFooter hook.
  *}
+{if !$articlesBySameAuthor->wasEmpty()}
+<div class="my_block_title">
+ 	<h3>{translate key="plugins.generic.recommendByAuthor.heading"}</h3>
+</div>
 <div id="articlesBySameAuthorList" class="pkp_block">
 	{if $noMetricSelected}
 		<h3>{translate key="plugins.generic.recommendByAuthor.heading"}</h3>
 		{translate key="plugins.generic.recommendByAuthor.noMetric"}
 	{else}
-		{if !$articlesBySameAuthor->wasEmpty()}
-			<h3>{translate key="plugins.generic.recommendByAuthor.heading"}</h3>
 			<div class="myArticles">
 				{iterate from=articlesBySameAuthor item=articleBySameAuthor}
 					{assign var=publishedArticle value=$articleBySameAuthor.publishedArticle}
@@ -35,6 +37,6 @@
 			<div id="articlesBySameAuthorPages">
 				{page_links anchor="articlesBySameAuthor" iterator=$articlesBySameAuthor name="articlesBySameAuthor"}
 			</div>
-		{/if}
 	{/if}
 </div>
+{/if}
