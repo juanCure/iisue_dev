@@ -17,8 +17,8 @@
 		<ul>
 			{foreach from=$languageToggleLocales item=localeName key=localeKey}
 				<li class="locale_{$localeKey|escape}{if $localeKey == $currentLocale} current{/if}">
-					<a href='{url router=$smarty.const.ROUTE_PAGE page="user" op="setLocale" path=$localeKey source=$smarty.server.REQUEST_URI}'>
-						<span class="flag-icon flag-icon-{if $localeKey == 'en_US'}us{elseif $localeKey == 'es_ES'}es{/if}"></span>
+					<span class="flag-icon flag-icon-{if $localeKey == 'en_US'}us{elseif $localeKey == 'es_ES'}es{/if}"></span>
+					<a href='{url router=$smarty.const.ROUTE_PAGE page="user" op="setLocale" path=$localeKey source=$smarty.server.REQUEST_URI}'>{$localeName|upper|truncate:2:"":true}
 					</a>
 				</li>
 			{/foreach}
