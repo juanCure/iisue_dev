@@ -5,6 +5,7 @@ body {
 	color:#5d606f;
 	line-height: 1.6;
 }
+	div#hamburguesa {	padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden;}
 
 ol li {
 	padding-bottom: 20px;
@@ -410,10 +411,10 @@ h2.acc-header.active {
 h2.acc-header.active:hover {
     background-color: #eee !important;
 }
-h2.acc-header.active::after {
+body.pkp_op_archive h2.acc-header.active::after {
     content: '\002B';
 }
-h2.acc-header::after {
+body.pkp_op_archive h2.acc-header::after {
 	content: "\2212";
 }
 
@@ -562,6 +563,8 @@ li.locale_en_US, li.locale_es_ES {
 /*---------------------------------------------------- LAPTOP -----------------------------------------------------*/
 @media screen and (max-width:1850px){
 .pkp_structure_head { border-left: 5px solid red; /* responsive */}
+	
+	div#hamburguesa {	padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden;}
 
 	/*registro top*/
 	#navigationUser { width: 100px;}
@@ -580,6 +583,8 @@ li.locale_en_US, li.locale_es_ES {
 /*****LANDSCAPE:H****/
 @media screen and (max-width: 1220px){
 .pkp_structure_head { border-left: 5px solid pink; /* responsive */}
+ 
+	div#hamburguesa {	padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden;}
 	
 	html, body, .pkp_structure_page { box-sizing: border-box;}
 	
@@ -617,7 +622,11 @@ li.locale_en_US, li.locale_es_ES {
 	.sections, .obj_issue_toc .sections:not(:first-child) {
 		width: 64%; margin-right: 5px;}
 	.heading #metadata_issue {
-		width: 53%;}
+		width: 55%;
+	}
+	body.pkp_page_index #metadata_issue .title span {
+		font-size: 90% !important;
+	}
 	.obj_issue_toc .galleys {
 		width: 46.2%;}
 	.obj_issue_toc .cover {
@@ -639,33 +648,209 @@ li.locale_en_US, li.locale_es_ES {
 @media screen and (max-width: 1023px){
 .pkp_structure_head { border-left: 5px solid green; /* responsive */}	
 	
+	div#hamburguesa {	padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden;}
+
+	
 	/*top*/
 	.pkp_site_name_wrapper {
 		min-height: 65px;}
 	
-	.pkp_navigation_user_wrapper {
-		position: absolute;
-    left:97%;
-    background: wheat;
-    width: 17%;
-		-webkit-transition: all .55s ease;
-		-moz-transition: all .55s ease;
-		-ms-transition: all .55s ease;
-		-o-transition: all .55s ease;
-	transition: all .55s ease;
-	}
-	.pkp_navigation_user_wrapper:hover {
-    	left:85%;}
+	/*registro top*/
+	#navigationUser { top: 65px;}
+	.pkp_navigation_user > li > a { padding-right: 0; font-size: 8px; padding-bottom: 0; padding-top: 0; color:#fff !important;}	
 	
 	/*nav*/
 	.pkp_navigation_primary {
 		width: 100%; }
 	
+	/*buscador*/
+	.container-2 input#search {
+		width: 600px; height: 30px;
+		margin-top: 2px; margin-right: 15%;
+		margin-bottom: 2px;
+	}
+	.container-2 .icon {
+	margin-right: 17%;
+	margin-top: 10px;
+	}
 	
+	/*  RIGHTSIDEBAR */
+	body.pkp_page_index .pkp_structure_sidebar .pkp_block .content {
+		width: 55% !important;
+		float: left;
+	}
+	body.pkp_page_index .pkp_structure_sidebar .pkp_block:nth-child(2) {
+		margin-top: -10px;
+	}
+	body.pkp_page_index .pkp_structure_sidebar .block_language {
+		width: 40%;
+		margin-top: -70px;
+	}
 	
-	
-	
+	/*footer*/
+	.my_footer_content #right_content {
+   	 	background: url("assets/perfiles/firma_unam.svg") no-repeat right top;
+		background-size: 100% auto;
+	}
 	
 	
 	
 } /* END TABLET: V*/
+
+/*---------------------------------------------------- PHONE ----------------------------------------------------------*/
+/*****LANDSCAPE:H****/
+@media screen and (max-width: 680px) {
+	
+	.pkp_structure_head { border-left: 5px solid purple; /* responsive */}	
+	
+	/*.pkp_navigation_primary_wrapper > ul#navigationPrimary { padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden; }*/
+	
+	
+	/*NAV*/
+		div#hamburguesa {	padding: 0px; margin: 0; width: 100%; height: 100%; background: pink; overflow: hidden;}
+	
+	/*top*/
+	.pkp_site_name_wrapper {
+    	background: url("assets/perfiles/fdo_iisue.jpg"), url("assets/perfiles/top.jpg");
+    	background-size: auto 90%, 100%;
+		background-repeat: no-repeat, no-repeat;
+		background-position: top right, top left;
+		min-height: 45px;	
+		height: auto;
+		position: relative;
+		margin-right: 8px;
+	}
+	/*registro top*/
+	#navigationUser { top: 47px;}
+	
+	/*buscador*/
+	.container-2 input#search {
+		width: 130%; height: 30px;
+		margin-top: 2px; 
+		margin-bottom: 2px;
+		margin-right: 0;
+	}
+	.container-2 .icon {
+		margin-right: 4.5%;
+		margin-top: 10px;
+	}
+	/*contenido*/
+	.heading #metadata_issue {
+		width: 100%;
+	}
+	body.pkp_page_index #metadata_issue .title span {
+		font-size: 100% !important;
+	}
+	.obj_issue_toc .cover img {
+		width: 170px;
+		margin: auto;}
+	.obj_issue_toc .section h2 {
+    	margin-bottom: 0;
+	}
+	.sections, .obj_issue_toc .sections:not(:first-child) {
+    	width: 64%;
+    	margin-right: 17%;}
+	.pkp_page_index .current_issue .read_more {
+    	font-size: 12px; 
+		margin-left: 70%;
+		margin-top: -50px;
+		position: relative;
+		display: block;
+	}
+	
+	/*rightsidebar*/
+	body.pkp_page_index .pkp_structure_sidebar .pkp_block .content {
+	    width: 55% !important;
+	    margin-left: 20%;
+	}
+	.pkp_block iframe[name="f3834c75c7b549c"] {
+		margin-left: 22%;
+	}
+	
+	
+} /* END PHONE: H*/
+
+/*---------------------------------------------------- PHONE ----------------------------------------------------------*/
+/*****PORTRAIT:V****/
+@media screen and (max-width: 480px) {
+	
+	.pkp_structure_head { border-left: 5px solid aqua; /* responsive */}	
+	
+	/*.pkp_navigation_primary_wrapper > ul#navigationPrimary { padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden; }*/
+	
+	
+	/*NAV*/
+		div#hamburguesa {	padding: 0px; margin: 0; width: 100%; height: 100%; background: pink; overflow: hidden;}
+	
+	/*top*/
+	.pkp_site_name_wrapper {
+    	background: url("assets/perfiles/fdo_iisue.jpg"), url("assets/perfiles/top.jpg");
+    	background-size: auto 100%, 100%;
+		background-repeat: no-repeat, no-repeat;
+		background-position: top right, top left;
+		min-height: 32px;	
+		height: auto;
+		position: relative;
+		margin-right: 0;
+	}
+	
+	/*buscador*/
+	.container-2 input#search {
+		width: 100%; height: 30px;
+		margin-top: 2px; 
+		margin-bottom: 2px;
+		margin-right: 0;
+	}
+	
+	/*contenido*/
+	.page {
+
+    margin-left: 0;
+    margin-right: 0;
+
+}
+	.page_index_journal .current_issue {
+    	margin-right: 0;
+	}
+	.page_index_journal .current_issue {
+    	margin-left: 0;
+	}
+	.sections, .obj_issue_toc .sections:not(:first-child) {
+    	width: 70%;
+    	margin-right: 17%;
+		margin-bottom: 0;
+	}
+	.pkp_page_index .current_issue .read_more {
+    	font-size: 13px; 
+		margin-left: 20px;
+		margin-top: 0;
+		display: inline-block;
+	}
+	body.pkp_page_index .pkp_structure_sidebar .block_language {
+    width: 100%;
+    margin-top: 0px;
+
+}
+	
+	
+	/*rightsidebar*/
+	body.pkp_page_index .pkp_structure_sidebar .pkp_block .content {
+	    width: auto !important;
+	    margin-left: -10px;
+	}
+	.pkp_block iframe[name="f3834c75c7b549c"] {
+		margin-left: 0;
+	}
+	
+	/*Footer*/
+	.my_footer_content .left_content {
+    	width: 100%;
+	}
+	.my_footer_content #right_content {
+    	height: 100px;
+    	width: 50%;
+    	padding: 20px 0;
+    	margin-right: 25%;
+	}
+	
+} /* END PHONE: V*/
