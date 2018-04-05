@@ -731,13 +731,14 @@ li.locale_en_US, li.locale_es_ES {
 	span.icon-menu {
 		content: '.' !important;}
 	#menuPhone {
-    	width: 230%;
+    width: 230%;
 		height: 250px;
 		background: none;
 		position: absolute;
 		top: 34px;
 		left: 15%;
 		z-index: 1000;
+		display: none;
 }
 	#menuPhone li {
         width: 100%;
