@@ -5,7 +5,7 @@ body {
 	color:#5d606f;
 	line-height: 1.6;
 }
-	div#hamburguesa {	padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden;}
+	div#hamburguesa { display: inline-block; padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden;}
 
 ol li {
 	padding-bottom: 20px;
@@ -564,7 +564,7 @@ li.locale_en_US, li.locale_es_ES {
 @media screen and (max-width:1850px){
 .pkp_structure_head { border-left: 5px solid red; /* responsive */}
 	
-	div#hamburguesa {	padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden;}
+	div#hamburguesa { display: inline-block; padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden;}
 
 	/*registro top*/
 	#navigationUser { width: 100px;}
@@ -584,7 +584,7 @@ li.locale_en_US, li.locale_es_ES {
 @media screen and (max-width: 1220px){
 .pkp_structure_head { border-left: 5px solid pink; /* responsive */}
  
-	div#hamburguesa {	padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden;}
+	div#hamburguesa { display: inline-block; padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden;}
 	
 	html, body, .pkp_structure_page { box-sizing: border-box;}
 	
@@ -607,7 +607,7 @@ li.locale_en_US, li.locale_es_ES {
 	.pkp_navigation_primary_row {
    	 	width: 100%;
     	margin: 0 auto;}
-	.pkp_navigation_primary {width: 70%;}
+	.pkp_navigation_primary {width: 69%;}
 	.pkp_navigation_primary > li > a {
     padding: 10px 8px 8px;
     color: #fff; font-size: 14px;
@@ -648,7 +648,7 @@ li.locale_en_US, li.locale_es_ES {
 @media screen and (max-width: 1023px){
 .pkp_structure_head { border-left: 5px solid green; /* responsive */}	
 	
-	div#hamburguesa {	padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden;}
+	div#hamburguesa { display: inline-block; padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden;}
 
 	
 	/*top*/
@@ -703,11 +703,80 @@ li.locale_en_US, li.locale_es_ES {
 	
 	.pkp_structure_head { border-left: 5px solid purple; /* responsive */}	
 	
-	/*.pkp_navigation_primary_wrapper > ul#navigationPrimary { padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden; }*/
+	.pkp_navigation_primary_wrapper > ul#navigationPrimary { padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden; }
 	
 	
 	/*NAV*/
-		div#hamburguesa {	padding: 0px; margin: 0; width: 100%; height: 100%; background: pink; overflow: hidden;}
+	div#hamburguesa { 
+		display: inline-block;
+		padding: 0px;
+		margin-left: 10%;
+		width: 30%;
+		height: 100%;
+		overflow: visible;
+		color: purple;
+		position: relative;		
+	}
+
+	span.icon-menu::after {
+		content: '\2630';
+		color: #fff;
+		width: 100px;
+		height: 32px;
+		display: block;
+		font-size: 38px;
+		line-height: 0.5;
+		font-weight: bold;
+	}
+	span.icon-menu {
+		content: '.' !important;}
+	#menuPhone {
+    	width: 230%;
+		height: 250px;
+		background: none;
+		position: absolute;
+		top: 34px;
+		left: 15%;
+		z-index: 1000;
+}
+	#menuPhone li {
+        width: 100%;
+        height: 50px;
+        background: rgba(93,96,111,0.90);
+        list-style: none;
+        text-align: center;
+        line-height: 50px;
+        position: relative; /* para poder mover lo de adentro que tendrá posición absoluta*/
+        color: #f1f1f1;
+        border-bottom: solid 1px #fff;
+        font-family: inherit;
+        letter-spacing: 1px;
+        text-shadow: 3px 3px 3px #333;
+        display: block;
+        
+        overflow: hidden; /* enmascarillar */
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+    
+	}
+	#hamburguesa .pkp_navigation_primary > li:first-child a {
+    	margin-left: 0;
+    	background: transparent;
+	}
+	#hamburguesa .pkp_navigation_primary > li a {
+    	line-height: 2;
+	}
+	#hamburguesa .pkp_navigation_primary > li > a:hover, #hamburguesa .pkp_navigation_primary > li > a:focus {
+    	background: rgba(93,96,111,0.90);
+    	text-decoration: none !important;
+		border:0;
+	}
+	#hamburguesa .pkp_navigation_primary > li:hover, #hamburguesa .pkp_navigation_primary > li:focus {
+    	background: #505361;
+	}
 	
 	/*top*/
 	.pkp_site_name_wrapper {
@@ -760,13 +829,28 @@ li.locale_en_US, li.locale_es_ES {
 	
 	/*rightsidebar*/
 	body.pkp_page_index .pkp_structure_sidebar .pkp_block .content {
-	    width: 55% !important;
-	    margin-left: 20%;
+	    width: 100% !important;
+	    margin-left:0;
 	}
 	.pkp_block iframe[name="f3834c75c7b549c"] {
-		margin-left: 22%;
+		padding-left: 22%;
 	}
 	
+	/*Footer*/
+	.my_footer_content .left_content {
+    	width: 100%;
+	}
+	.pkp_block iframe {
+    	width: 100% !important;
+    	margin-left: 0px;
+}
+	.my_footer_content #right_content {
+    	height: 100px;
+    	width: 50%;
+    	padding: 20px 0;
+    	margin-right: 35%;
+		background-size: 50% auto;
+	}
 	
 } /* END PHONE: H*/
 
@@ -776,11 +860,23 @@ li.locale_en_US, li.locale_es_ES {
 	
 	.pkp_structure_head { border-left: 5px solid aqua; /* responsive */}	
 	
-	/*.pkp_navigation_primary_wrapper > ul#navigationPrimary { padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden; }*/
+	.pkp_navigation_primary_wrapper > ul#navigationPrimary { padding: 0px; margin: 0; width: 0; height: 0; overflow: hidden; }
 	
 	
 	/*NAV*/
-		div#hamburguesa {	padding: 0px; margin: 0; width: 100%; height: 100%; background: pink; overflow: hidden;}
+	div#hamburguesa { 
+		margin-left: 0;
+		width: 18%;
+		height: 100%;
+		overflow: visible;
+		color: purple;
+		position: relative;		
+	}
+	#menuPhone {
+    	width: 500%;
+		left: 15%;
+	}
+	
 	
 	/*top*/
 	.pkp_site_name_wrapper {
@@ -796,19 +892,22 @@ li.locale_en_US, li.locale_es_ES {
 	
 	/*buscador*/
 	.container-2 input#search {
-		width: 100%; height: 30px;
+		width: 100% ; height: 30px;
 		margin-top: 2px; 
 		margin-bottom: 2px;
 		margin-right: 0;
 	}
+	form.pkp_search { width: 75%;
+	}
+	
+	/*registro*/
+	#navigationUser {  top: 37px; }
 	
 	/*contenido*/
 	.page {
-
-    margin-left: 0;
-    margin-right: 0;
-
-}
+    	margin-left: 0;
+    	margin-right: 0;
+	}
 	.page_index_journal .current_issue {
     	margin-right: 0;
 	}
@@ -834,12 +933,9 @@ li.locale_en_US, li.locale_es_ES {
 	
 	
 	/*rightsidebar*/
-	body.pkp_page_index .pkp_structure_sidebar .pkp_block .content {
-	    width: auto !important;
-	    margin-left: -10px;
-	}
 	.pkp_block iframe[name="f3834c75c7b549c"] {
-		margin-left: 0;
+		padding-left: 0 !important;
+		width: 100% !important;
 	}
 	
 	/*Footer*/
@@ -851,6 +947,7 @@ li.locale_en_US, li.locale_es_ES {
     	width: 50%;
     	padding: 20px 0;
     	margin-right: 25%;
+		background-size: 100% auto;
 	}
 	
 } /* END PHONE: V*/
